@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(90deg, #9333EA 0%, #3B82F6 100%)',
