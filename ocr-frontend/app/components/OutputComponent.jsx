@@ -45,7 +45,7 @@ const OutputComponent = ({ ExtractedText }) => {
                         </button>
                         {/* "Copied" Badge */}
                         {showCopiedBadge && (
-                            <div className="absolute -top-8 right-6 sm:right-9 md:right-6 bg-green-500 text-white text-xs px-2 py-1 rounded">
+                            <div className="absolute -top-8 right-9 sm:right-6 md:right-6 lg:right-9 bg-green-500 text-white text-xs px-2 py-1 rounded">
                                 Copied!
                             </div>
                         )}

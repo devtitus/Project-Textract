@@ -65,7 +65,7 @@ const UploadComponent = ({ onTextExtracted }) => {
                     <div className="text-center flex flex-col items-center">
                         <img src="/upload.svg" className="w-12 xs:w-10 md:w-16 h-auto" />
                         <p className="text-[#374151] font-poppins font-semibold text-lg md:text-xl mt-4">Drag & Drop Your File Here</p>
-                        <p className="text-base md:text-lg font-poppins text-[#4B5563] mt-2">or</p>
+                        <p className="text-base md:text-lg font-poppins text-[#4B5563] mt-2">Supported formats (png, jpg, jpeg, bmp, tiff, tif)</p>
                         <button
                             type="button"
                             className="mt-3 px-4 md:px-6 py-2 md:py-3 font-poppins bg-[#FFFFFF80] text-black border border-[#1e1e1e58] rounded-lg hover:bg-[#9333EA] hover:text-white"
