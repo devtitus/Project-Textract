@@ -27,56 +27,51 @@ This project is designed to provide a simple and efficient way to convert images
 To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
 2. **Set Up the Backend**
    
    1. Navigate to the backend folder:
-```bash
-cd backend
-```
+   ```bash
+   cd backend
+   ```
 
    2. Create a virtual environment and install dependencies:
-
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
    3. Start the Flask server:
-
-```bash
-python app.py
-```
+   ```bash
+   python app.py
+   ```
 
 3. **Set Up the Frontend**
    
    1. Navigate to the frontend folder:
-
-```bash
-cd ../frontend
-```
-
+   ```bash
+   cd ../frontend
+   ```
+   
    2. Install dependencies:
-
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
    3. Start the Next.js development server:
-
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
    4. **Access the Application**
-```   
-Open your browser and go to http://localhost:3000.
-```
+   ```   
+   Open your browser and go to http://localhost:3000.
+   ```
 
 ## Deployment
 
