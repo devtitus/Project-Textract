@@ -25,27 +25,27 @@ const OutputComponent = ({ ExtractedText }) => {
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'extracted-text.txt';
+            a.download = 'Textract-DigitalCopy.txt';
             a.click();
             URL.revokeObjectURL(url);
         }
     };
 
     return (
-        <div className='flex flex-col items-center mt-4 w-3/5 px-16'>
-            <div className='w-full flex flex-col gap-4 bg-[#F9F2FF] border border-[#A855F740] p-10 rounded-2xl shadow-[0px_2px_4px_0px_rgba(0,0,0,0.04),0px_5px_10px_0px_rgba(0,0,0,0.04)]'>
+        <div className='flex flex-col items-center mt-4 w-full md:w-full lg:w-3/5 px-4 md:px-16'>
+            <div className='w-full flex flex-col gap-4 bg-[#F9F2FF] border border-[#A855F740] p-4 md:p-8 rounded-2xl shadow-[0px_2px_4px_0px_rgba(0,0,0,0.04),0px_5px_10px_0px_rgba(0,0,0,0.04)]'>
                 <div className='flex flex-row items-center justify-between'>
-                    <h2 className='text-[#374151] font-poppins text-xl'>Extracted Text:</h2>
-                    <div className='flex flex-row gap-3 items-center w-auto relative'> {/* Add relative here */}
+                    <h2 className='text-[#374151] font-poppins text-lg md:text-xl'>Extracted Text:</h2>
+                    <div className='flex flex-row gap-3 items-center w-auto relative'>
                         <button
                             onClick={handleCopyText}
                             className="border border-[#E5E7EB] p-2 bg-white rounded-lg hover:bg-gray-100 transition-colors"
                         >
-                            <img src="/copy.svg" alt="Copy Icon" className="w-4 h-4" />
+                            <img src="/copy.svg" alt="Copy Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </button>
                         {/* "Copied" Badge */}
                         {showCopiedBadge && (
-                            <div className="absolute -top-8 right-0 bg-green-500 text-white text-xs px-2 py-1 rounded">
+                            <div className="absolute -top-8 right-6 sm:right-9 md:right-6 bg-green-500 text-white text-xs px-2 py-1 rounded">
                                 Copied!
                             </div>
                         )}
@@ -53,12 +53,12 @@ const OutputComponent = ({ ExtractedText }) => {
                             onClick={handleDownloadText}
                             className="border border-[#E5E7EB] p-2 bg-white rounded-lg hover:bg-gray-100 transition-colors"
                         >
-                            <img src="/download.svg" alt="Download Icon" className="w-4 h-4" />
+                            <img src="/download.svg" alt="Download Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
                         </button>
                     </div>
                 </div>
                 <pre
-                    className='border border-[#E5E7EB] p-4 font-poppins'
+                    className='border border-[#E5E7EB] p-4 font-poppins text-base md:text-base'
                     style={{
                         whiteSpace: 'pre-wrap',
                         background: '#fff',
