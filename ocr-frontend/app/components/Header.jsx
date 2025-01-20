@@ -11,7 +11,7 @@ const Header = () => {
                     <img src="/logo.svg" alt="App Logo" className="w-8 md:w-10 h-8 md:h-10" />
                     <p className="text-xl md:text-2xl font-poppins font-bold text-[#1F2937]">Textract</p>
                 </a>
-                <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-[#9333EA]">
+                <a href="https://github.com/devtitus/Project-Textract.git" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-[#9333EA]">
                     <GitHubIcon />
                     <span className="font-poppins font-normal text-sm md:text-base">GitHub</span>
                 </a>
