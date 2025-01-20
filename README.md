@@ -1,4 +1,4 @@
-# OCR Web Application
+# OCR Web Application [![Netlify Status](https://api.netlify.com/api/v1/badges/6eec8c31-0010-4edf-8056-77ec79cc70d0/deploy-status)](https://app.netlify.com/sites/textractocr/deploys)
 
 ## Application Preview
 
@@ -9,14 +9,14 @@
 The **OCR Web Application** is a tool that allows users to extract text from images using Optical Character Recognition (OCR). It is built with:
 
 - **Frontend**: Next.js (hosted on Netlify)
-- **Backend**: Flask + EasyOCR (hosted on Render)
+- **Backend**: Flask + PaddleOCR (hosted on Render)
 
 This project is designed to provide a simple and efficient way to convert images containing text into editable digital text.
 
 ## Features
 
 - **Image Upload**: Upload images (JPEG, PNG, etc.) containing text.
-- **Text Extraction**: Extract text from images using EasyOCR.
+- **Text Extraction**: Extract text from images using PaddleOCR.
 - **Responsive Design**: Works seamlessly on desktop and mobile devices.
 - **CORS Support**: Backend configured with CORS for cross-origin requests.
 - **Environment Variables**: Dynamic backend URL configuration using environment variables.
@@ -103,7 +103,7 @@ To run this project locally, follow these steps:
 * Backend:
 
     * Flask
-    * EasyOCR
+    * PaddleOCR
 
 * Hosting:
 
@@ -131,7 +131,7 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ## Acknowledgments
 
-   * [EasyOCR](https://www.jaided.ai/easyocr/) for the OCR functionality.
+   * [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR.git) for the OCR functionality.
    * [Next.js](https://nextjs.org/) and Flask for the frontend and backend frameworks.
    * [Netlify](https://www.netlify.com/) and [Render](https://render.com/) for hosting.
 
