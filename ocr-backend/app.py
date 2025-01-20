@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import easyocr
+from paddleocr import PaddleOCR
 import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Initialize EasyOCR reader
-reader = easyocr.Reader(['en'])
+# Initialize PaddleOCR
+ocr = PaddleOCR(use_angle_cls=True, lang='en')  # Load only the English model
 
 # Allowed file extensions
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'bmp', 'tiff', 'tif'}
@@ -18,7 +18,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/ocr', methods=['POST'])
-def ocr():
+def ocr_endpoint():
     if 'image' not in request.files:
         return jsonify({'error': 'No file uploaded'}), 400
 
@@ -37,8 +37,9 @@ def ocr():
 
     # Perform OCR
     try:
-        result = reader.readtext(file_path)
-        text = ' '.join([text for (_, text, _) in result])
+        # Use PaddleOCR to process the image
+        result = ocr.ocr(file_path, cls=True)
+        text = ' '.join([line[1][0] for line in result[0]])  # Extract text from the result
     except Exception as e:
         return jsonify({'error': f'OCR processing failed: {str(e)}'}), 500
     finally:

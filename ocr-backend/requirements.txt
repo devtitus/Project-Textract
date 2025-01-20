@@ -1,5 +1,7 @@
 Flask
 flask-cors
-easyocr
+paddleocr
+paddlepaddle
 werkzeug
+pillow
 waitress
