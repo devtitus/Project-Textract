@@ -20,7 +20,7 @@ export default {
         'md': '768px',   // Medium devices (tablets)
         'lg': '1024px',  // Large devices (laptops)
         'xl': '1280px',  // Extra large devices (desktops)
-        '2xl': '1536px', // Extra extra large devices (large desktops)
+        '2xl': '1600px', // Extra extra large devices (large desktops)
       },
     },
   },
